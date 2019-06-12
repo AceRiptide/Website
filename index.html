@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Centrum szkoleniowe GOL</title>
+    <meta name="description" content="Strona internetowa Centrum szkoleniowego GOL" />
+    <meta name="keywords" content="GOL, szkolenie, kurs, trening, centrum" />
+    <meta name="author" content="Mieszko Nowiński">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="shortcut icon" href="img/ball.ico">
+   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    
+    <script type = "text/javascript">
+	
+        var numer = Math.floor(Math.random()*6)+1;
+        var timer1=0;
+        var timer2=0;
+        var timer3=0;
+        
+        function ustawslajd(nrslajdu)
+        {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+            numer=nrslajdu-1;
+            
+            schowaj();
+            timer3=setTimeout("zmienslajd()",500);
+            
+        }
+        
+        function schowaj()
+        {
+            $("#slider").stop();
+            $("#slider").fadeOut(500);
+            
+        }
+        
+        function zmienslajd()
+        {
+            clearTimeout(timer3);
+            numer++; if (numer>6) numer =1;
+            var plik="<img src=\"img/slajd" + numer + ".png\" />";
+            
+            document.getElementById("slider").innerHTML = plik;
+            $("#slider").fadeIn(500);
+            
+            timer1 = setTimeout("zmienslajd()",5000);
+            timer2 = setTimeout("schowaj()",4500);
+        }
+        
+        </script>
+    
+
+
+
+
+</head>
+
+<body onload="zmienslajd()">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="d-none d-xl-block">
+                    <a href="#navi" class="button"> </a>
+            </div>
+        </div>
+    </div>
+        
+     <nav id="navi" class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                   <a class="navbar-brand" href="#"> <img src="img/logo.png"> </a>
+           
+                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#elo">
+                      <span class="navbar-toggler-icon"></span> 
+                   </button>
+                   <div class="collapse navbar-collapse" id="elo">
+                       <ul class="navbar-nav ml-auto">
+                           <li class="nav-item active">
+                               <a class="nav-link" href="#">Główna</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link" href="#onas">O nas</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link" href="#oferta">Oferta</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link" href="#trening">Trening</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link" href="#galeria">Galeria</a>
+                           </li>
+                           <li class="nav-item">
+                                <a class="nav-link" href="#zarząd">Zarząd</a>
+                            </li>
+                           <li class="nav-item">
+                                   <a class="nav-link" href="#media">Kontakt</a>
+                           </li>
+                       </ul>
+                   </div>
+           
+                </div>
+    </nav>
+
+    <div id="bgimgs" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/background.jpg">
+             <div class="carousel-caption">
+                <h1 class="display-1">GOL</h1>
+                <h3>Szkółka Piłkarska</h3>
+                <a class="lk" href="#onas"><button type="button" class="btn btn-primary btn-lg">Poznaj nas</a></button></a>
+                <a class="lk" href="#oferta"><button type="button" class="btn btn-outline-dark btn-lg">Sprawdź naszą ofertę</a></button></a>
+             </div>
+            </div>  
+        </div>
+    </div> 
+
+    <div class="container-fluid">
+        <div class="row about-us">
+                <div class="col-12">
+                    <h1 id="onas" class="display-3"><i class="far fa-address-card"></i> O nas</h1>
+                </div>
+                <hr>
+                <div class="col-12">
+                    <p class="lead ab">Szkółka Piłkarska GOL została stworzona dla dzieci i rodziców z pasją, a także dla tych, którzy jej poszukują. Działamy z myślą o tym, by jak najlepiej przygotować dzieci i młodzież do grania w najlepszych polskich klubach, a potem nawet i w zagranicznych. Jesteśmy solidnym zespołem trenerów, lekarzy, byłych piłkarzy i wiele wiele więcej. Nasze centrum uważane jest przez wielu specjalistów za najlepszy wybór w Polsce dla dziecka które chce podążać w kierunku grania w piłkę nożną. Szkółka przeznaczona jest dla dzieci kochających ten sport, ale nie tylko. Jeśli wachasz się przy wyborze, przyjdź na sesję treningową, zobacz, jak wygląda. Centrum jest otwarte codziennie w godzinach od rana do wieczora, każdy może przyjść i zobaczyć jak to wszystko wygląda.<br>
+                            Przyjdź, nie pożałujesz! <br> <br>
+                    </p>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                        <h1 class="display-3"><i class="far fa-smile"></i></h1>
+                        <h1 class="display-3">100%</h1>
+                        <p>Satysfakcji</p>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                            <h1 class="display-3"> <i class="fab fa-earlybirds"></i> </h1>
+                        <h1 class="display-3">10</h1>
+                        <p>Lat doświadczenia</p>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                            <h1 class="display-3"> <i class="fas fa-users"></i>
+                            <h1 class="display-3">83</h1>
+                            <p>Osoby w zespole</p>
+                        </div>
+        </div>
+    </div>
+
+    <div class="parallax">
+        </div>
+
+
+    <div class="container-fluid">
+        <div class="row offer">
+                <div class="col-12">
+                    <h1 id="oferta" class="display-3"><i class="fab fa-accusoft"></i> Co oferujemy</h1>
+                    <ul>
+                        <hr>
+					
+                            <li><i class="fas fa-futbol"></i>  Bezpieczeństwo </li>
+                            <li><i class="fas fa-futbol"></i>  Dbanie o zdrowie </li>
+                            <li><i class="fas fa-futbol"></i>  Najlepsza kadra trenerska</li>
+                            <li><i class="fas fa-futbol"></i>  Rywalizacja, ale i dobra zabawa </li>
+                            <li><i class="fas fa-futbol"></i>  Świetna atmosfera </li>
+                            <li><i class="fas fa-futbol"></i>  Piłkarska przygoda na całe życie </li>
+                            <li><i class="fas fa-futbol"></i>  Harmonijy rozwój dziecka </li>
+                            <li><i class="fas fa-futbol"></i>  Zgrupowania i obozy </li>
+                            <li><i class="fas fa-futbol"></i>  Programy treningowe dostosowane do grup wiekowych </li>
+                            <li><i class="fas fa-futbol"></i>  Brak selekcji </li>
+                            <li><i class="fas fa-futbol"></i>  Budowa świadomości sportowej </li>
+                            
+                            
+                        </ul>
+        
+                </div>
+        </div>
+    </div>
+
+    <div class="parallax">
+    </div>
+
+    <div class="container-fluid">
+        <div class="row trainingandgallery">
+            <div class="col-12">
+                <h1 id="trening" class="display-3"><i class="far fa-calendar-alt"></i> Treningi - nasz plan</h1> <hr>
+                <br> <br> <br>
+                <div class="d-none d-md-block plan">
+                <img src="img/plan.png">
+                </div>
+                <div class="d-md-none planht">
+                    <a href="plan.html" target="_blank">Sprawdź nasz plan tutaj.</a>
+                </div>
+                <div class="d-none d-md-block logoo" >
+                <img src="img/logo2.png"> 
+                </div>
+            </div>
+                <div class="col-12">
+                        <h1 id="galeria" class="display-3">
+                            <i class="fas fa-camera-retro"></i> Zobacz naszą galerię</h1>
+                    </div>
+                    <hr>
+
+                    <div class="col-9 col-lg-6" id="slider">
+                    </div>
+
+                    <div class="col-3 col-lg-2" id="clicks">
+                         <span onclick="ustawslajd(1)" class="click"><h2>[<i class="fas fa-futbol"></i>]</h2> </span> <br>
+                         <span onclick="ustawslajd(2)" class="click"><h2>[<i class="fas fa-futbol"></i>]</h2> </span> <br>
+                         <span onclick="ustawslajd(3)" class="click"><h2>[<i class="fas fa-futbol"></i>]</h2> </span> <br>
+                         <span onclick="ustawslajd(4)" class="click"><h2>[<i class="fas fa-futbol"></i>]</h2> </span> <br>
+                         <span onclick="ustawslajd(5)" class="click"><h2>[<i class="fas fa-futbol"></i>]</h2></span> <br>
+                         <span onclick="ustawslajd(6)" class="click"><h2>[<i class="fas fa-futbol"></i>]</h2> </span>
+                    </div>
+                    
+                    <div class="col-sm-12 col-lg-4" id="txt">
+                            <h4>A tak wyglądają nasze boiska i nasi zadowoleni podopieczni!  Zapisz się do szkółki GOL, a również i ty będziesz w stanie zdobywać trofea na turniejach i nie tylko! Bo czeka Cię świetna zabawa, miła atmosfera, wiele nowych przyjaźni i wspaniałych przygód! <br>Nie zwlekaj i nie zastanawiaj się! Przyjdź na oględziny z rodzicem kiedy tylko chcesz, nasze centrum otwarte jest codziennie w godzinach od rana do wieczora.<h4>
+
+                    </div>
+
+                    <div class="col-12 boss">
+                            <h1 id="zarząd" class="display-3">
+                            <i class="fas fa-poll-people"></i>Poznaj nasz zarząd</h1>
+                    </div>
+                    <hr>
+                    <div class ="col-md-5">
+                        <div class="card" id="janas">
+                            <img class="card-img-top" src="img/janas.jpg">
+                            <div class="card-body">
+                                <h4 class="card-title">Paweł Janas</h4>
+                                <p class="card-text">Paweł Janas to były trener. Najbardziej znany z trenowania polskiej kadry w latach 2002-2006.</p>
+                                <a href="https://pl.wikipedia.org/wiki/Pawe%C5%82_Janas" target="_blank" class="btn btn-outline-secondary">Dowiedz się więcej</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class ="col-md-5">
+                        <div class="card">
+                            <img class="card-img-top" src="img/frankowski.jpg">
+                            <div class="card-body">
+                                <h4 class="card-title">Tomasz Frankowski</h4>
+                                <p class="card-text">Tomasz Frankowski to były piłkarz. Najbardziej znany z gry w narodowej reprezentacji.
+                                </p>
+                                <a href="https://pl.wikipedia.org/wiki/Tomasz_Frankowski" target="_blank" class="btn btn-outline-secondary">Dowiedz się więcej
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+              
+                             <div class="col-12">
+                                <h1 class="display-4" id="media"> Nasze media </h1>
+                            </div>
+                            <div class="col-12 media-icons">
+                                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://plus.google.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+            
+            
+            
+         </div>
+    </div>
+
+ <footer>
+    <div class="container-fluid">
+        <div class="row stopka">
+            <div class="col-md-4">
+                <h2>Szkółka Piłkarska GOL</h2>
+                <hr>
+                <p>Mieszko Nowiński</p>
+                <p>+48510745811</p>
+                <p>gol@gmail.com</p>
+                <p>Zakrętna 10</p>
+                <p>87-100 Toruń</p>
+            </div>
+            <div class="col-md-4">
+                <h5><br>Godziny otwarcia:</h5>
+                <br>
+                <p>Pon-Pt: 6:30 - 22:30 </p>
+                <p>Sobota: 9:30 - 22:30</p>
+                <p>Niedziela: 10:30 - 22:30</p>
+            </div>
+            <div class="col-md-4 partners">
+                <h5><br> Nasi partnerzy: </h5>
+                <a href="https://www.adidas.pl/" target="_blank"><p>@Adidas</p></a>
+                <a href="https://www.nike.com/pl/" target="_blank"><p>@Nike</p></a>
+                <a href="https://elanatorun.com/" target="_blank"><p>@Elana Toruń</p></a>
+                <a href="https://www.reebok.pl/" target="_blank"><p>@Reebok</p></a>
+                <a href="https://www.naleczowianka.pl/" target="_blank"><p>@Nałęczowianka</p></a>
+            </div>
+            <div class="col-12">
+                <hr class="footerhr">
+                <h5 class="footercopy">&copy Szkółka piłkarska GOL   
+                        <a href="pogoda.html" target="_blank" class="btn btn-outline-secondary api">Ciekawostka o pogodzie!
+                        </a>
+                </h5>
+            </div>
+        </div>
+    </div>
+ </footer>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+</body>
+</html>
+
+           

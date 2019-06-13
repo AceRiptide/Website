@@ -339,6 +339,7 @@ ul > li
 
 @media (max-width:768px)
 {
+
     .carousel-caption
     {
         top:15%;
@@ -359,24 +360,51 @@ ul > li
         padding: 8px 14px;
     }
 
+    .media-icons a
+    {
+        font-size: 35px;
+        padding: 8px;
+    }
+
+
+    .parallax
+{
+    background: url("img/background2.jpg");
+    background-size: cover;
+	background-attachment: fixed;
+	height: 200px;
+}
+}
     @media(max-width:576px)
 {
+
     .carousel-caption
     {
         top:10%;
     } 
     .carousel-caption h1
     {
-        font-size:250%;
+        font-size:150%;
     }
     .carousel-caption h3
     {
-        font: size 110%;
+        font: size 200%;
     }
     .carousel-caption .btn
     {
-        font-size: 90%;
-        padding: 4px 8px;
+        font-size: 80%;
+        padding: 2px 4px;
     }
+
+    .display-3
+    {
+        font-size: 250%;
+    }
+
+    .h2click
+    {
+        font-size: 100%;
+    }
+
 
 }
